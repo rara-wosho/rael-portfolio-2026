@@ -1,9 +1,9 @@
 import {
     Geist,
-    Geist_Mono,
     Instrument_Serif,
     Montserrat,
     Urbanist,
+    Orbitron,
 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -14,6 +14,12 @@ const geistSans = Geist({
 });
 
 // Initialize the font
+const orb = Orbitron({
+    subsets: ["latin"],
+    // weight: ["900"],
+    // style: ["normal"],
+    variable: "--font-orb",
+});
 const instrumentSerif = Instrument_Serif({
     subsets: ["latin"],
     weight: ["400"],
@@ -33,11 +39,6 @@ const urbanist = Urbanist({
     variable: "--font-urbanist",
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
 export const metadata = {
     title: "Israel De Vera",
     description: "Portfolio 2026",
@@ -47,11 +48,11 @@ export default function RootLayout({ children }) {
     return (
         <html
             lang="en"
-            className={`${geistSans.variable} ${instrumentSerif.variable} ${urbanist.variable} ${montserrat.variable} h-full antialiased`}
+            className={`${geistSans.variable} ${instrumentSerif.variable} ${urbanist.variable} ${montserrat.variable} ${orb.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <>
-                    <Navbar />
+                    {/* <Navbar />  */}
                     {children}
                 </>
             </body>

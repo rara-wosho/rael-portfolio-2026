@@ -1,19 +1,27 @@
-import Lenis from 'lenis'
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 const useLenisScroll = () => {
-    // Lenis Library for smooth scroll
-    const lenis = new Lenis()
+    useEffect(() => {
+        const lenis = new Lenis();
+        let animationFrameId;
 
-    lenis.on('scroll', (e) => {
-        console.log("Animated scoll: ", e.animatedScroll)
-    })
+        lenis.on("scroll", (event) => {
+            console.log("Animated scroll: ", event.animatedScroll);
+        });
 
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
+        function raf(time) {
+            lenis.raf(time);
+            animationFrameId = requestAnimationFrame(raf);
+        }
 
-    requestAnimationFrame(raf)
-}
+        animationFrameId = requestAnimationFrame(raf);
 
-export default useLenisScroll
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            lenis.destroy();
+        };
+    }, []);
+};
+
+export default useLenisScroll;

@@ -36,11 +36,8 @@
     --sidebar-accent-foreground: rgb(28, 156, 240);
     --sidebar-border: rgb(56, 68, 77);
     --sidebar-ring: rgb(29, 161, 242);
-    --font-sans: var(--font-mont);
-    --font-ins: var(--font-instrument-serif);
     --font-serif: Georgia, serif;
     --font-mono: Menlo, monospace;
-    --font-urbanist: var(--font-urbanist);
     --radius: 1.3rem;
     --shadow-x: 0px;
     --shadow-y: 2px;
@@ -107,10 +104,12 @@
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
 
-    --font-sans: var(--font-sans);
+    --font-sans: var(--font-mont);
     --font-mono: var(--font-mono);
     --font-serif: var(--font-serif);
-    --font-ins: var(--font-ins);
+    --font-ins: var(--font-instrument-serif);
+    --font-orbitron: var(--font-orb);
+    --font-urbanist: var(--font-urbanist);
 
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
