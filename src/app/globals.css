@@ -12,11 +12,11 @@
     --primary: rgb(28, 156, 240);
     --primary-foreground: rgb(255, 255, 255);
     --secondary: rgb(240, 243, 244);
-    --secondary-foreground: rgb(15, 20, 25);
-    --muted: rgb(24, 24, 24);
-    --muted-foreground: rgb(114, 118, 122);
+    --secondary-foreground: rgb(160, 160, 165);
+    --muted: rgb(39, 39, 44);
+    --muted-foreground: rgb(143, 147, 150);
     /* --accent: rgb(96, 255, 213); */
-    --accent: rgb(178, 62, 62);
+    --accent: rgb(31, 213, 219);
     --accent-foreground: rgb(28, 156, 240);
     --destructive: rgb(244, 33, 46);
     --destructive-foreground: rgb(255, 255, 255);
