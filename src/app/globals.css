@@ -3,7 +3,7 @@
 /* @custom-variant dark (&:is(.dark *));  */
 
 :root {
-    --background: rgb(9, 9, 12);
+    --background: rgb(8, 10, 15);
     --foreground: rgb(231, 233, 234);
     --card: rgb(23, 24, 28);
     --card-foreground: rgb(217, 217, 217);
@@ -12,7 +12,7 @@
     --primary: rgb(28, 156, 240);
     --primary-foreground: rgb(255, 255, 255);
     --secondary: rgb(240, 243, 244);
-    --secondary-foreground: rgb(160, 160, 165);
+    --secondary-foreground: rgb(165, 165, 170);
     --muted: rgb(39, 39, 44);
     --muted-foreground: rgb(143, 147, 150);
     /* --accent: rgb(96, 255, 213); */
@@ -104,12 +104,13 @@
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
 
-    --font-sans: var(--font-mont);
+    --font-sans: var(--font-poppins);
     --font-mono: var(--font-mono);
     --font-serif: var(--font-serif);
     --font-ins: var(--font-instrument-serif);
     --font-orbitron: var(--font-orb);
     --font-urbanist: var(--font-urbanist);
+    --font-zalando: var(--font-zalando);
 
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
@@ -133,4 +134,12 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.center {
+    @apply items-center justify-center;
+}
+
+.black-overlay::before {
+    @apply content-[''] absolute inset-0 w-full h-full bg-[rgba(8,10,15,.8)] z-[5];
 }

@@ -4,6 +4,8 @@ import {
     Montserrat,
     Urbanist,
     Orbitron,
+    Zalando_Sans_Expanded,
+    Poppins,
 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -39,8 +41,21 @@ const urbanist = Urbanist({
     variable: "--font-urbanist",
 });
 
+const zalando = Zalando_Sans_Expanded({
+    subsets: ["latin"],
+    weight: ["400", "800", "900"],
+    style: ["normal", "italic"],
+    variable: "--font-zalando",
+});
+
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["300", "400", "800", "900"],
+    style: ["normal", "italic"],
+    variable: "--font-poppins",
+});
 export const metadata = {
-    title: "Israel De Vera",
+    title: "Israel De Vera | Full Stack Developer",
     description: "Portfolio 2026",
 };
 
@@ -48,7 +63,7 @@ export default function RootLayout({ children }) {
     return (
         <html
             lang="en"
-            className={`${geistSans.variable} ${instrumentSerif.variable} ${urbanist.variable} ${montserrat.variable} ${orb.variable} h-full antialiased`}
+            className={`${geistSans.variable} ${instrumentSerif.variable} ${urbanist.variable} ${montserrat.variable} ${orb.variable} ${zalando.variable} ${poppins.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <>
